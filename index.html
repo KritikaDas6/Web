@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AV Web Scraping 101</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🖥️</text></svg>">
+</head>
+<body style="background-color: #dbd7f7;">
+  <nav class="bg-navbar">
+      <div class="flex justify-between p-4 font-poppins font-bold align-middle flex-col navbarmin:flex-row w-full">
+          <h1 class="text-[25px] text-navbartext font-bold cursor-default">WebScraping101</h1>
+				
+          <div class="flex self-start navbarmin:self-center navbarmin:space-x-5 justify-around space-x-3 font-bold text-[10px] navbarmin:text-[17px]">
+	<div class= "nav">
+		<div class="links">
+              <ul class="flex space-x-4 text-white">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="practiceproblem1.html">Practice Problem 1</a></li>
+                  <li><a href="practiceproblem2.html">Practice Problem 2</a></li>
+                  <li><a href="feedback.html">Feedback</a></li>
+              </ul>
+		</div>	
+          </div>
+                    <div class="flex self-start navbarmin:self-center navbarmin:space-x-5 justify-around space-x-3 font-bold text-[10px] navbarmin:text-[17px]">
+                    </div>
+                </div>
+            </nav>
+            <div class="relative font-poppins">
+                <div class="image-div">
+                    <img src="banner.jpg" id="slideshow" alt="Image" class="blur-[6px] lg:blur-[6px]"
+                         width="100%">
+                </div>
+                <div class="absolute inset-0 flex justify-center items-center text-center ">
+                    <div class="text-div">
+                        <p class="font-bold text-navbartext text-[18px] md:text-[50px]">HOW TO WEB SCRAPE</p>
+                        <p class="font-bold text-white text-[12px] md:text-[25px] self-center">A Beginner Tutorial<br>Aathma, Kritika, Paul, Shlok, Soham</p>
+                        <p class="font-bold text-white text-[12px] md:text-[25px] self-center"></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col py-12 space-y-11">
+							<div class="flex flex-row justify-center">
+								<iframe width="100%" height="600"
+								src="https://www.youtube.com/embed/cz4omQXrKdw">
+								</iframe>
+							</div>
+                <div class="flex flex-col lg:flex-row justify-around px-1 lg:px-16 items-center space-x-4">
+                    <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                        <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins ">What is Web Scraping?</p>
+                        <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins">Web Scraping is a technique in which data is extracted from websites by parsing the HTML code of the websites. By running a short piece of code, we can automatically pull specific information from websites. It is very helpful in gathering major sources of data more effeciently and error-prone than manually viewing the data.</p>
+                    </div>
+                    <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                        <img src="1.jpg" width="95%" class="rounded-3xl">
+                    </div>
+                </div>
+
+                <div class="flex flex-col-reverse lg:flex-row justify-around px-1 lg:px-16 items-start space-y-5 lg:space-y-0">
+                  <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                      <img src="2.png" width="95%" class="rounded-3xl">
+                  </div>
+                    <div class="w-full lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                        <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">How can I Web Scrape?
+                        <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins">There are many ways to start Web Scraping with several languages. The most beginner-friendly for Web Scraping is Python, so let's create a simple web scraper and try using it. First, head over to replit.com and create an account if you don't already have one. Next, create a new Python repl on replit.com (see the image on the left for how this should look). Using this repl, let's scrape quotes from the website: <span class="nowrap" style="text-decoration: underline;"><a href="https://quotes.toscrape.com" target="_blank">quotes.toscrape.com</a></span>
+													
+												</p>
+                    </div>
+
+                </div>
+
+                <div class="flex flex-col lg:flex-row justify-around px-1 lg:px-16 items-center  lg:space-x-4  space-y-5 lg:space-y-0">
+                    <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                        <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">Now what?</p>
+                        <p class="text-white text-[15px] navbarmin:text-[20px] leading-[30px] font-poppins"><b>Copy and paste the following code into main.py:</b><br>
+
+    <code>
+                            import requests<br>
+                            from bs4 import BeautifulSoup<br>
+
+                           <b> # Define the URL of the webpage you want to scrape<br></b>
+                            url = ''<br>
+
+			<b># Send an HTTP GET request to the URL<br></b>
+                            response = requests.get(url)<br>
+
+                          <b> # Check if the request was successful (status code 200)<br></b>
+                            if response.status_code == ___:<br> 
+                              <b>  # Parse the HTML content of the page with BeautifulSoup<br></b>
+                                soup = BeautifulSoup(response.content, 'html.parser')<br>
+
+                              <b>  # Find the HTML elements that contain the quotes and their authors<br> </b>
+                                quote_elements = soup.find_all('span', class_='___')<br>
+                                author_elements = soup.find_all('small', class_='___')<br>
+
+                              <b>  # Loop through the found elements and extract the text (quotes and authors)<br></b>
+                                for quote, author in zip(quote_elements, author_elements):<br>
+                                    print(f'Quote: {quote.text}')<br>
+                                    print(f'Author: {author.text}\n')<br>
+                            else:<br>
+                                print(f"Failed to retrieve the webpage. Status code: {response.status_code}")<br>
+
+                          </code>
+                        </p>
+                        </p>
+                    </div>
+                  <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                      <img src="5.jpeg" width="95%" class="rounded-3xl">
+                  </div>
+
+                </div>
+
+              <!-- //first  -->
+                <div class="flex flex-col-reverse lg:flex-row justify-around px-1 lg:px-16 items-start  lg:space-x-4  space-y-5 lg:space-y-0">
+                  <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                      <img src="6.jpeg" width="95%" class="rounded-3xl">
+                  </div>
+                    <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                        <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">Try running this code, does it work?</p>
+                        <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins">If you run this code, your output should look like the image to the left. Notice that there's an error. This is because parts of the code are missing! Let's work together to complete the code. </p>
+                    </div>
+
+                </div>
+
+
+              <div class="flex flex-col-reverse lg:flex-row justify-around px-1 lg:px-16 items-start  lg:space-x-4  space-y-5 lg:space-y-0">
+                
+                  <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                      <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">Fixing the url</p>
+                      <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins">
+                      Since we are trying to webscrape the website https://quotes.toscrape.com/, replace the url = '' with the following code: url = 'https://quotes.toscrape.com/'. Save and run the code. Did it work?</p>
+                      </p>
+                  </div>
+								<div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+										<img src="7.jpeg" width="95%" class="rounded-3xl">
+								</div>
+              </div>
+            <!-- lets fix tge rest -->
+
+
+
+              <div class="flex flex-col-reverse lg:flex-row justify-around px-1 lg:px-16 items-start  lg:space-x-4  space-y-5 lg:space-y-0">
+                <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                    <img src="8.jpeg" width="95%" class="rounded-3xl">
+                </div>
+                  <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                      <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">Let's fix the rest</p>
+                      <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins"> You should have recieved another error message, which means we're not done yet. When we request a webpage, a status code of 200 means success. So, let's replace the ___ with the correct number on line 8. Since we want to scrape the text and the author, replace the ___ on line 12 with 'text', and replace the ___ on line 13 with 'author' </p>
+                  </div>
+
+              </div>
+
+                <!-- <div class="flex flex-col-reverse lg:flex-row justify-around px-1 lg:px-16 items-start  lg:space-x-4  space-y-5 lg:space-y-0">
+                  <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                      <img src="5.png" width="95%" class="rounded-3xl">
+                  </div>
+                    <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                        <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">Let's fix the rest</p>
+                        <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins">
+                        No, we're not done yet. When we request a webpage, a status code of 200 means success. So, let's replace the ___ with the correct number on line 8. Since we want to scrape the text and the author, replace the ___ on line 12 with 'text', and replace the ___ on line 13 with 'author'</p>
+                        </p>
+                    </div>
+
+
+                  <div class="flex flex-col-reverse lg:flex-row justify-around px-1 lg:px-16 items-start  lg:space-x-4  space-y-5 lg:space-y-0">
+                    <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                        <img src="6.png" width="95%" class="rounded-3xl">
+                    </div>
+                      <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                          <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">Running the final product.</p>
+                          <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins">
+                          Run the code now. Does your output match the pitcure below? If not, revisit the previous steps. See how our output quote and the author. We have successfully scraped the website!</p>
+                          </p>
+                      </div>
+
+
+              </div>
+
+            </div> -->
+
+              <div class="flex flex-col lg:flex-row justify-around px-1 lg:px-16 items-center  lg:space-x-4  space-y-5 lg:space-y-0">
+                  <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+                      <p class="text-white text-[20px] navbarmin:text-[25px] font-bold font-poppins">Now what?</p>
+                      <p class="text-white text-[15px] navbarmin:text-[20px] leading-[30px] font-poppins">Check the final output of your code, does it look like this?
+                        For more practice, head over Practice Problem 1 & 2. To give us feedback, head over to the Feedback section!
+                      </p>
+                  </div>
+                <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+                    <img src="4.png" width="95%" class="rounded-3xl">
+                </div>
+
+              </div>
+
+
+            <script src="./static/js/script.js">
+
+            </script>
+            </body>
+            </html>
+

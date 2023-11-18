@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebScraping101 - Practice Problem 1</title>
+    <link rel="stylesheet" href="practiceproblem1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🖥️</text></svg>">
+</head>
+<body style="background-color: #dbd7f7;">
+
+  <!-- Navigation -->
+  <nav class="bg-navbar">
+      <div class="flex justify-between p-4 font-poppins font-bold align-middle flex-col navbarmin:flex-row w-full">
+          <h1 class="text-[25px] text-navbartext font-bold cursor-default">WebScraping101</h1>
+          <div class="flex self-start navbarmin:self-center navbarmin:space-x-5 justify-around space-x-3 font-bold text-[10px] navbarmin:text-[17px]">
+              <div class= "nav">
+                  <div class="links">
+                      <ul class="flex space-x-4 text-white">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="practiceproblem1.html">Practice Problem 1</a></li>
+                          <li><a href="practiceproblem2.html">Practice Problem 2</a></li>
+                          <li><a href="feedback.html">Feedback</a></li>
+                      </ul>
+                  </div>	
+              </div>
+              <div class="flex self-start navbarmin:self-center navbarmin:space-x-5 justify-around space-x-3 font-bold text-[10px] navbarmin:text-[17px]">
+              </div>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Content for Practice Problem 1 -->
+  <div class="flex flex-col py-12 space-y-11">
+      <div class="flex flex-col lg:flex-row justify-around px-1 lg:px-16 items-center space-x-4">
+          <!-- Placeholder for Practice Problem 1 content -->
+          <div class="lg:w-1/2 bg-containerbg rounded-3xl p-12 space-y-10 lg:space-y-4">
+              <p class="text-white text-[15px] navbarmin:text-[20px] font-poppins">For some extra practice, go to this website: <a href="https://www.scrapethissite.com/pages/simple/" target="_blank" style="TEXT-DECORATION: underline">Scrape Some Countries</a><br><br>The goal here is to get the information of countries, their capital, population, and area.</p>
+          </div>
+          <!-- Placeholder for Practice Problem 1 image -->
+          <div class="relative lg:w-1/2 transition-transform duration-300 hover:-translate-y-2">
+              <img src="countries.png" width="95%" class="rounded-3xl" alt="Practice Problem 1 Image">
+          </div>
+      </div>
+
+
+
+    
+      <!-- Images -->
+      <div>
+          <img id="codeimage" src="code2.png" alt="Code Image" hidden>
+          <img id="answerimage" src="answer2.png" alt="Answer Image" hidden>
+      </div>
+
+
+
+
+
+    
+      <!-- Buttons to show code and solution -->
+        <div class="flex justify-around space-x-4">
+        <!-- Improved styling and added onclick event for interactivity -->
+          <button onclick="toggle(this);">Show Sample Code</button>
+          <button onclick="toggle1(this);">Show Output</button>
+          
+          
+    </div>
+  </div>
+
+
+
+  
+  <script>
+    let toggle = button => {
+      let element = document.getElementById("codeimage");
+      let hidden = element.getAttribute("hidden");
+
+      if (hidden) {
+         element.removeAttribute("hidden");
+         img.innerText = "Hide image";
+      } else {
+         element.setAttribute("hidden", "hidden");
+         img.innerText = "Show image";
+      }
+    }
+    let toggle1 = button => {
+      let element = document.getElementById("answerimage");
+      let hidden = element.getAttribute("hidden");
+
+      if (hidden) {
+         element.removeAttribute("hidden");
+         img.innerText = "Hide image";
+      } else {
+         element.setAttribute("hidden", "hidden");
+         img.innerText = "Show image";
+      }
+    }
+  </script>
+</body>
+</html>
